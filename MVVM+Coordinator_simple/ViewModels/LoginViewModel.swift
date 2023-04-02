@@ -17,9 +17,11 @@ class LoginViewModel {
         if login != User.logins[0].login || password != User.logins[0].password {
             statusText.value = "Login failed"
             statusColor.value = UIColor.red
+            isLoggedIn = false
         } else {
             statusText.value = "Login successful"
             statusColor.value = UIColor.green
+            isLoggedIn = true
         }
     }
 }

@@ -33,6 +33,7 @@ final class LoginViewController: UIViewController, Storyboardable {
     @IBAction private func logInAction(_ sender: Any) {
         setupLogInAction()
     }
+
 }
 
 // MARK: - private extension
@@ -68,6 +69,11 @@ private extension LoginViewController {
               let passwordText = passwordTextField.text,
               let viewModel = viewModel else { return }
         viewModel.userButtonPressed(login: loginText, password: passwordText)
+
+        if viewModel.isLoggedIn {
+            coordinator?.isLoggedIn = viewModel.isLoggedIn
+            coordinator?.showMain(login: loginText)
+        }
     }
 
 }

@@ -18,6 +18,11 @@
 		7FEC3F5329D9AEDF0039B69C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEC3F5229D9AEDF0039B69C /* Coordinator.swift */; };
 		7FEC3F5529D9AF460039B69C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEC3F5429D9AF460039B69C /* AppCoordinator.swift */; };
 		7FEC3F5829D9B04B0039B69C /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEC3F5729D9B04B0039B69C /* Storyboardable.swift */; };
+		7FEC3F5A29D9B3C80039B69C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEC3F5929D9B3C80039B69C /* MainViewController.swift */; };
+		7FEC3F5C29D9B3DB0039B69C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEC3F5B29D9B3DB0039B69C /* DetailViewController.swift */; };
+		7FEC3F5E29D9B4070039B69C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEC3F5D29D9B4070039B69C /* MainViewModel.swift */; };
+		7FEC3F6029D9B4170039B69C /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEC3F5F29D9B4170039B69C /* DetailViewModel.swift */; };
+		7FEC3F6229D9B4290039B69C /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEC3F6129D9B4290039B69C /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,11 @@
 		7FEC3F5229D9AEDF0039B69C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		7FEC3F5429D9AF460039B69C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		7FEC3F5729D9B04B0039B69C /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
+		7FEC3F5929D9B3C80039B69C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		7FEC3F5B29D9B3DB0039B69C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		7FEC3F5D29D9B4070039B69C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		7FEC3F5F29D9B4170039B69C /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		7FEC3F6129D9B4290039B69C /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				7FEC3F4929D9A0C80039B69C /* User.swift */,
+				7FEC3F6129D9B4290039B69C /* UserData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -105,8 +116,10 @@
 			isa = PBXGroup;
 			children = (
 				7FEC3F5629D9B02F0039B69C /* Protocols */,
-				7FEC3F3229D99F9A0039B69C /* LoginViewController.swift */,
 				7FEC3F4729D9A0910039B69C /* Storyboards */,
+				7FEC3F3229D99F9A0039B69C /* LoginViewController.swift */,
+				7FEC3F5929D9B3C80039B69C /* MainViewController.swift */,
+				7FEC3F5B29D9B3DB0039B69C /* DetailViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -116,6 +129,8 @@
 			children = (
 				7FEC3F4B29D9A0F00039B69C /* Bindings */,
 				7FEC3F4C29D9A1050039B69C /* LoginViewModel.swift */,
+				7FEC3F5D29D9B4070039B69C /* MainViewModel.swift */,
+				7FEC3F5F29D9B4170039B69C /* DetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -233,14 +248,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FEC3F6229D9B4290039B69C /* UserData.swift in Sources */,
 				7FEC3F4D29D9A1050039B69C /* LoginViewModel.swift in Sources */,
 				7FEC3F4A29D9A0C80039B69C /* User.swift in Sources */,
 				7FEC3F5329D9AEDF0039B69C /* Coordinator.swift in Sources */,
 				7FEC3F3329D99F9A0039B69C /* LoginViewController.swift in Sources */,
 				7FEC3F5829D9B04B0039B69C /* Storyboardable.swift in Sources */,
 				7FEC3F4F29D9A1800039B69C /* Dynamic.swift in Sources */,
+				7FEC3F5A29D9B3C80039B69C /* MainViewController.swift in Sources */,
+				7FEC3F6029D9B4170039B69C /* DetailViewModel.swift in Sources */,
+				7FEC3F5C29D9B3DB0039B69C /* DetailViewController.swift in Sources */,
 				7FEC3F2F29D99F9A0039B69C /* AppDelegate.swift in Sources */,
 				7FEC3F5529D9AF460039B69C /* AppCoordinator.swift in Sources */,
+				7FEC3F5E29D9B4070039B69C /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

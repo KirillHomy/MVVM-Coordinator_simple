@@ -21,19 +21,21 @@ class AppCoordinator: Coordinator {
     // MARK: -  General method
     func start() {
         if isLoggedIn {
-            showMain()
+            guard let login = User.logins[0].login else { return }
+            showMain(login: login)
         } else {
             showLoggin()
         }
     }
 
-}
-
-// MARK: - Private extension
-private extension AppCoordinator {
-
-    func showMain() {
-        
+    func showMain(login: String) {
+        let vc = MainViewController.createObject()
+        let viewModel = MainViewModel()
+        viewModel.login = login
+        vc.coordinator = self
+        vc.viewModel = viewModel
+        navigationController.viewControllers.removeAll()
+        navigationController.pushViewController(vc, animated: true)
     }
 
     func showLoggin() {
@@ -43,4 +45,14 @@ private extension AppCoordinator {
         vc.viewModel?.isLoggedIn = isLoggedIn
         navigationController.pushViewController(vc, animated: true)
     }
+
+    func showDetail() {
+        let vc = DetailViewController.createObject()
+        let viewModel = DetailViewModel()
+        viewModel.model = UserData.userData
+        vc.coordinator = self
+        vc.viewModel = viewModel
+        navigationController.pushViewController(vc, animated: true)
+    }
+
 }
