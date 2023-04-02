@@ -7,10 +7,11 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class LoginViewController: UIViewController, Storyboardable {
 
-    // MARK: - Private variables
-    private var viewModel = ViewModel()
+    // MARK: - General variables
+    var viewModel: LoginViewModel?
+    var coordinator: AppCoordinator?
 
     // MARK: - Private IBOutlet
     @IBOutlet private weak var loginScreenLabel: UILabel!
@@ -35,7 +36,7 @@ final class ViewController: UIViewController {
 }
 
 // MARK: - private extension
-private extension ViewController {
+private extension LoginViewController {
 
     func setupUI() {
         bindViewModel()
@@ -43,6 +44,7 @@ private extension ViewController {
     }
 
     func bindViewModel() {
+        guard let viewModel = viewModel else { return }
         viewModel.statusText.bind { statusText in
             DispatchQueue.main.async {
                 self.responseLabel.text = statusText
@@ -63,7 +65,8 @@ private extension ViewController {
     // MARK: - IBAction Method
     func setupLogInAction() {
         guard let loginText = loginTextField.text,
-              let passwordText = passwordTextField.text else { return }
+              let passwordText = passwordTextField.text,
+              let viewModel = viewModel else { return }
         viewModel.userButtonPressed(login: loginText, password: passwordText)
     }
 
